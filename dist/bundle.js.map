@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","sources":["../tree-shaking-example/src/module.ts"],"sourcesContent":["export function usedFunction() {\n    console.log('This function is used.');\n}\nexport function unusedFunction() {\n    console.log('This function is never used.');\n}\n"],"names":["console","log"],"mappings":"AACIA,QAAQC,IAAI"}
