@@ -1,0 +1,20 @@
+const express = require('express');
+const app = express();
+
+// Middleware function
+const myMiddleware = (req, res, next) => {
+    console.log('Middleware executed');
+    next();
+};
+
+// Apply middleware only to a specific route
+app.get('/protected', myMiddleware, (req, res) => {
+    res.send('This route uses middleware');
+});
+
+// Route without middleware
+app.get('/public', (req, res) => {
+    res.send('This route does not use middleware');
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
